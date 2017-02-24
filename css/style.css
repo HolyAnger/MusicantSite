@@ -1,6 +1,7 @@
 *{
     padding:0;
     margin:0;
+	
 }
 @keyframes greet {
     from{
@@ -34,7 +35,7 @@
     text-align: center;
     text-transform: uppercase;
     color:white;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.67);
     overflow:hidden;
 }
 #menu{
@@ -44,7 +45,7 @@
     transform: translate(-50%, -50%);
     display:none;
     letter-spacing: 5px;
-    transition: left .4s  ;
+    transition: left  .5s, right .5s ;
 }
 h1{
     display: inline-block;
@@ -75,23 +76,101 @@ h1{
     background-size: cover;
     transition: .5s;
 }
-.left:hover{
-    transform: rotate(180deg);
-    cursor: pointer;
-}
 
 
-.right:hover{
-    transform: rotate(-180deg);
-    cursor: pointer;
-}
 #info{
     position: fixed;
     left:-580px;
     top:0;
     height:100%;
+
+
     width:30%;
     background-color: rgba(0,0,0,.7);
     transition: left .6s ;
 }
+#list{
+	@import url('https://fonts.googleapis.com/css?family=Asap');
+    position: fixed;
+    right:-770px;
+    top:0;
+    height:100%;
+    width:40%;
+    background-color: rgba(0,0,0,.7);
+    transition: right .6s ;
+	
+}
+h2{
+	margin-top:15px;
+	font-family: 'Asap', sans-serif;
+}
+.row{
+    width:100%;
+    height:100%;
+	margin-top:20px;
+}
+ .video-block{
+    float: left;
+    width:30%;
+    height:10%;
+    background-color: aliceblue;
+    border-radius: 5px;
+     position: relative;
+     margin-left: 3%;
 
+}
+.video-block  img{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+
+
+.video-block  p{
+    font-size: 17px;
+    max-height: 30px;
+}
+.play{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color .5s;
+}
+ .play:hover{
+   cursor: pointer;
+     background: rgba(0,0,0,.2) url(../media/play.png)  no-repeat center;
+     background-size:40px 40px ;
+}
+
+#modal{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height:60%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 1000;
+    display: none;
+}
+#modal iframe{
+   position: absolute;
+    left: 5%;
+    top:10%;
+    width: 90%;
+    height:85%;
+}
+
+.close{
+    position: absolute;
+    right: 0;
+    display: block;
+    width:50px;
+    height:50px;
+    background-image: url(../media/close.png) ;
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
+}

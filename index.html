@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="modal">
+    <a class="close"></a>
+    <iframe id='frame' width="854" height="480" src="" frameborder="0" allowfullscreen></iframe>
+</div>
     <div class="background-wrap">
         <video id="video-bg" autoplay loop muted>
           <source src="media/1.mp4" type="video/mp4">
@@ -14,7 +18,32 @@
     </div>
 
         <div id="greet">
-            <div id="info"></div>
+
+            <div id="info">
+            </div>
+            <div id="list">
+                <h2>Covers</h2>
+                <div class="row">
+                    <div video = 'https://www.youtube.com/embed/rE3DgeXMITc' class="video-block" onclick="value(this)">
+                        <a class='play' href="#"></a>
+                        <img src="media/cover.png" alt="">
+                        <p>Metallica - Master of Puppets</p>
+                    </div>
+                    <div video="https://www.youtube.com/embed/GoNK2cxP_Yw" class="video-block" onclick="value(this)" >
+                        <a class='play' href="#"></a>
+                        <img src="media/cover1.png" alt="">
+                        <p>Metallica - Enter Sandman</p>
+                    </div>
+                    <div video = "https://www.youtube.com/embed/38EH1p0E0TM" class="video-block" class="video-block" onclick="value(this)">
+                        <a class='play' href="#"></a>
+                        <img src="media/cover2.png" alt="">
+                        <p>Metallica - Nothing Else Matters</p>
+                    </div>
+
+                </div>
+            </div>
+
+
             <div id="menu">
                 <span class="left"></span>
                 <h1>HolyAnger's</h1>
@@ -22,8 +51,10 @@
                 <h1>covers</h1>
             </div>
         </div>
+
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/flowtype.js"></script>
     <script src="js/js.js"></script>
+
 </body>
 </html>
