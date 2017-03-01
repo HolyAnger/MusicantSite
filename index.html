@@ -4,35 +4,106 @@
     <meta charset="UTF-8">
     <title>HolyAnger's covers</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <style>
+        #page-preloader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,1);
+            z-index: 100500;
+        }
+
+        #page-preloader .spinner {
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background:  url('media/2.gif') no-repeat 50% 50%;
+            margin: -32px 0 0 -32px;
+        }
+    </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="page-preloader"><span class="spinner"></span></div>
+
 <div id="modal">
     <a class="close"></a>
-    <iframe id='frame' width="854" height="480" src="" frameborder="0" allowfullscreen></iframe>
+    <iframe id='frame' width="854" height="480" src="" autoplay="1" frameborder="0" allowfullscreen ></iframe>
 </div>
+<div class="overlay"></div>
     <div class="background-wrap">
         <video id="video-bg" autoplay loop muted>
           <source src="media/1.mp4" type="video/mp4">
         </video>
     </div>
 
-        <div id="greet">
+        <section id="greet">
 
-            <div id="info">
-            </div>
-            <div id="list">
+            <article id="info">
+                <h2>Our Group</h2>
+                <div class="band-wrapper">
+                    <div class="musicant">
+                        <div class="img-wrapper">
+                            <img src="media/Oleg.jpg"  alt="">
+                        </div>
+                        <p>Oleg - Rhytm Guitar</p>
+                    </div>
+                    <div class="musicant">
+                        <div class="img-wrapper">
+                            <img src="media/Rustam.jpg"  alt="">
+                        </div>
+                        <p>Rustam - Vocal</p>
+                    </div>
+                    <div class="musicant">
+                        <div class="img-wrapper">
+                            <img src="media/Vlad.jpg"  alt="">
+                        </div>
+                        <p>Vlad - Solo Guitar</p>
+                    </div>
+                    <div class="musicant">
+                        <div class="img-wrapper">
+                            <img src=""  alt="Bass">
+                        </div>
+                    </div>
+                    <div class="musicant">
+                        <div class="img-wrapper">
+                            <img src=""  alt="Drumm">
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+            <article id="list">
                 <h2>Covers</h2>
-                <div class="row">
-                    <div video = 'https://www.youtube.com/embed/rE3DgeXMITc' class="video-block" onclick="value(this)">
+                <div class="cover-wrapper">
+                    <div video = 'https://www.youtube.com/embed/BoLQ2Xmx4_8' class="video-block" onclick="value(this)">
                         <a class='play' href="#"></a>
                         <img src="media/cover.png" alt="">
-                        <p>Metallica - Master of Puppets</p>
+                        <p>Metallica - Enter Sandman</p>
                     </div>
-                    <div video="https://www.youtube.com/embed/GoNK2cxP_Yw" class="video-block" onclick="value(this)" >
+                    <div video="https://www.youtube.com/embed/-Qxqlsp7jaQ" class="video-block" onclick="value(this)" >
                         <a class='play' href="#"></a>
                         <img src="media/cover1.png" alt="">
+                        <p>Iron Maiden - Wasting Love</p>
+                    </div>
+                    <div video = "https://www.youtube.com/embed/38EH1p0E0TM" class="video-block" class="video-block" onclick="value(this)">
+                        <a class='play' href="#"></a>
+                        <img src="media/cover2.png" alt="">
+                        <p>Metallica - Nothing Else Matters</p>
+                    </div>
+                    <div video = 'https://www.youtube.com/embed/BoLQ2Xmx4_8' class="video-block" onclick="value(this)">
+                        <a class='play' href="#"></a>
+                        <img src="media/cover.png" alt="">
                         <p>Metallica - Enter Sandman</p>
+                    </div>
+                    <div video="https://www.youtube.com/embed/-Qxqlsp7jaQ" class="video-block" onclick="value(this)" >
+                        <a class='play' href="#"></a>
+                        <img src="media/cover1.png" alt="">
+                        <p>Iron Maiden - Wasting Love</p>
                     </div>
                     <div video = "https://www.youtube.com/embed/38EH1p0E0TM" class="video-block" class="video-block" onclick="value(this)">
                         <a class='play' href="#"></a>
@@ -41,16 +112,15 @@
                     </div>
 
                 </div>
-            </div>
+            </article>
 
 
-            <div id="menu">
-                <span class="left"></span>
-                <h1>HolyAnger's</h1>
-                <span class="right"></span>
-                <h1>covers</h1>
-            </div>
-        </div>
+                <div id="menu">
+                    <span class="left"></span>
+                    <h1>Onward covers</h1>
+                    <span class="right"></span>
+                </div>
+        </section>
 
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/flowtype.js"></script>
