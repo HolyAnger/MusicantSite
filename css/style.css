@@ -124,7 +124,7 @@ h2{
     height:100%;
     width: 100%;
     transition: filter .9s, opacity .5s;
-    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(50%);
     opacity: .3;
 }
 
